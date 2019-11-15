@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>360</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>360</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>600</width>
+    <height>360</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Poetsen One</family>
+    <pointsize>11</pointsize>
+    <weight>50</weight>
+    <italic>false</italic>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Nostale Multiclient Creator</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../mainform.qrc">
+    <normaloff>:/main/img/logo.ico</normaloff>:/main/img/logo.ico</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 11pt &quot;Poetsen One&quot;;
+border-image: url(:/main/img/bg.png) 0 0 0 0 stretch stretch;</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>30</width>
+    <height>30</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="font">
+    <font>
+     <family>Poetsen One</family>
+     <pointsize>11</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton::disabled{color:white; border-image: url(:/main/img/disabled.png);}
+
+QPushButton{color: white}
+
+QTabWidget::pane {
+    border: 1px solid black;
+}
+
+QTabWidget::tab-bar:top {
+    top: 1px;
+}
+
+QTabWidget::tab-bar:bottom {
+    bottom: 1px;
+}
+
+QTabWidget::tab-bar:left {
+    right: 1px;
+}
+
+QTabWidget::tab-bar:right {
+    left: 1px;
+}
+
+QTabBar::tab {
+    border: 1px solid black;
+}
+
+QTabBar::tab:selected {
+    background: white;
+}
+
+QTabBar::tab:!selected {
+    background: rgb(236, 236, 236);
+}
+
+QTabBar::tab:!selected:hover {
+    background: #999;
+}
+
+QTabBar::tab:top:!selected {
+    margin-top: 3px;
+}
+
+QTabBar::tab:bottom:!selected {
+    margin-bottom: 3px;
+}
+
+QTabBar::tab:top, QTabBar::tab:bottom {
+    min-width: 8ex;
+    margin-right: -1px;
+    padding: 5px 10px 5px 10px;
+}
+
+QTabBar::tab:top:selected {
+    border-bottom-color: none;
+}
+
+QTabBar::tab:bottom:selected {
+    border-top-color: none;
+}
+
+QTabBar::tab:top:last, QTabBar::tab:bottom:last,
+QTabBar::tab:top:only-one, QTabBar::tab:bottom:only-one {
+    margin-right: 0;
+}
+
+QTabBar::tab:left:!selected {
+    margin-right: 3px;
+}
+
+QTabBar::tab:right:!selected {
+    margin-left: 3px;
+}
+
+QTabBar::tab:left, QTabBar::tab:right {
+    min-height: 8ex;
+    margin-bottom: -1px;
+    padding: 10px 5px 10px 5px;
+}
+
+QTabBar::tab:left:selected {
+    border-left-color: none;
+}
+
+QTabBar::tab:right:selected {
+    border-right-color: none;
+}
+
+QTabBar::tab:left:last, QTabBar::tab:right:last,
+QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
+    margin-bottom: 0;
+}</string>
+   </property>
+   <widget class="QLabel" name="lab_kofi">
+    <property name="geometry">
+     <rect>
+      <x>442</x>
+      <y>314</y>
+      <width>143</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: none;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://ko-fi.com/Pumbaa&quot;&gt;&lt;img src=&quot;:/main/img/kofi4.png&quot; height=&quot;36&quot;/&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="openExternalLinks">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lab_creator">
+    <property name="geometry">
+     <rect>
+      <x>192</x>
+      <y>320</y>
+      <width>241</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poetsen One</family>
+      <pointsize>11</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: none;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://www.elitepvpers.com/forum/members/3141926-pumba98.html&quot;&gt;&lt;span style=&quot; font-size:18pt; text-decoration: underline; color:#ffffff;&quot;&gt;created by Pumba98&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="openExternalLinks">
+     <bool>true</bool>
+    </property>
+    <property name="textInteractionFlags">
+     <set>Qt::TextBrowserInteraction</set>
+    </property>
+    <property name="buddy">
+     <cstring></cstring>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="main_tabs">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>65</y>
+      <width>600</width>
+      <height>246</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poetsen One</family>
+      <pointsize>11</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: none;</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="sTab_standard">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <attribute name="title">
+      <string>Standard</string>
+     </attribute>
+     <widget class="QPushButton" name="btn_MulticlientLink">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>115</y>
+        <width>266</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poetsen One</family>
+        <pointsize>11</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::hover{border-image: url(:/main/img/purple_light.png) 0 0 0 0 stretch stretch;}
+QPushButton::pressed{border-image: url(:/main/img/purple_dark.png) 0 0 0 0 stretch stretch;}
+QPushButton::disabled{border-image: url(:/main/img/disabled.png) 0 0 0 0 stretch stretch;}
+QPushButton{
+border-image: url(:/main/img/purple.png) 0 0 0 0 stretch stretch;
+background-color: rgba(255, 255, 255,0);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Create Multiclient Shortcut</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Create">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>35</y>
+        <width>266</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poetsen One</family>
+        <pointsize>11</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::hover{border-image: url(:/main/img/blue_light.png) 0 0 0 0 stretch stretch;}
+QPushButton::pressed{border-image: url(:/main/img/blue_dark.png) 0 0 0 0 stretch stretch;}
+QPushButton::disabled{border-image: url(:/main/img/disabled.png) 0 0 0 0 stretch stretch;}
+QPushButton{
+border-image: url(:/main/img/blue.png) 0 0 0 0 stretch stretch;
+background-color: rgba(255, 255, 255,0);
+background-image: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>Create Multiclient</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Delete">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>35</y>
+        <width>266</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poetsen One</family>
+        <pointsize>11</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::hover{border-image: url(:/main/img/orange_light.png) 0 0 0 0 stretch stretch;}
+QPushButton::pressed{border-image: url(:/main/img/orange_dark.png) 0 0 0 0 stretch stretch;}
+QPushButton::disabled{border-image: url(:/main/img/disabled.png) 0 0 0 0 stretch stretch;}
+QPushButton{
+border-image: url(:/main/img/orange.png) 0 0 0 0 stretch stretch;
+background-color: rgba(255, 255, 255,0);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Delete Multiclient</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Start">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>115</y>
+        <width>266</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poetsen One</family>
+        <pointsize>11</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::hover{border-image: url(:/main/img/orange_light.png) 0 0 0 0 stretch stretch;}
+QPushButton::pressed{border-image: url(:/main/img/orange_dark.png) 0 0 0 0 stretch stretch;}
+QPushButton::disabled{border-image: url(:/main/img/disabled.png) 0 0 0 0 stretch stretch;}
+QPushButton{
+border-image: url(:/main/img/orange.png) 0 0 0 0 stretch stretch;
+background-color: rgba(255, 255, 255,0);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Start Multiclient</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="sTab_advanced">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <attribute name="title">
+      <string>P-Server</string>
+     </attribute>
+     <widget class="QLineEdit" name="in_ip">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>130</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poetsen One</family>
+        <pointsize>11</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="inputMask">
+       <string/>
+      </property>
+      <property name="text">
+       <string>79.110.84.75</string>
+      </property>
+      <property name="placeholderText">
+       <string>IP</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_createAdvancedGf">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>318</x>
+        <y>136</y>
+        <width>266</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poetsen One</family>
+        <pointsize>11</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::hover{border-image: url(:/main/img/blue_light.png) 0 0 0 0 stretch stretch;}
+QPushButton::pressed{border-image: url(:/main/img/blue_dark.png) 0 0 0 0 stretch stretch;}
+QPushButton::disabled{border-image: url(:/main/img/disabled.png) 0 0 0 0 stretch stretch;}
+QPushButton{
+border-image: url(:/main/img/blue.png) 0 0 0 0 stretch stretch;
+background-color: rgba(255, 255, 255,0);
+}</string>
+      </property>
+      <property name="text">
+       <string>Create Client with thinClient Login</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="in_filename">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>82</y>
+        <width>266</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poetsen One</family>
+        <pointsize>11</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="inputMask">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Filename</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_createAdvanced">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>318</x>
+        <y>46</y>
+        <width>266</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poetsen One</family>
+        <pointsize>11</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::hover{border-image: url(:/main/img/blue_light.png) 0 0 0 0 stretch stretch;}
+QPushButton::pressed{border-image: url(:/main/img/blue_dark.png) 0 0 0 0 stretch stretch;}
+QPushButton::disabled{border-image: url(:/main/img/disabled.png) 0 0 0 0 stretch stretch;}
+QPushButton{
+border-image: url(:/main/img/blue.png) 0 0 0 0 stretch stretch;
+background-color: rgba(255, 255, 255,0);
+}</string>
+      </property>
+      <property name="text">
+       <string>Create P-Server Multiclient</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cB_port">
+      <property name="geometry">
+       <rect>
+        <x>195</x>
+        <y>130</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poetsen One</family>
+        <pointsize>11</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="currentText">
+       <string>Port</string>
+      </property>
+      <property name="maxVisibleItems">
+       <number>11</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>Port</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4000 (EN)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4001 (DE)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4002 (FR)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4003 (IT)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4004 (PL)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4005 (ES)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4006 (CZ)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4007 (RU)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4008 (TR)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Other</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="btn_folderSelection">
+    <property name="geometry">
+     <rect>
+      <x>282</x>
+      <y>17</y>
+      <width>52</width>
+      <height>52</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 0);
+QPushButton::hover{border-image: url(:/main/img/folder_light.png);};
+QPushButton::pressed{border-image: url(:/main/img/folder_dark.png);};
+border-image: url(:/main/img/folder.png);
+border-style: solid;
+border-width:1px;
+border-radius:50px;
+max-width:50px;
+max-height:50px;
+min-width:50px;
+min-height:50px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="gB_versions">
+    <property name="geometry">
+     <rect>
+      <x>6</x>
+      <y>5</y>
+      <width>251</width>
+      <height>52</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poetsen One</family>
+      <pointsize>11</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: none;
+background-color: rgba(255, 255, 255, 0);
+QGroupBox {
+    border: 1px solid black;
+}
+QLabel{FontLoader: url(:/main/font/PoetsenOne-Regular.ttf); }
+
+</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLabel" name="lab_MCVersion">
+     <property name="geometry">
+      <rect>
+       <x>166</x>
+       <y>28</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poetsen One</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: none;
+background-color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string notr="true">1.0.0.1000</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lab_nosVersion">
+     <property name="geometry">
+      <rect>
+       <x>166</x>
+       <y>5</y>
+       <width>96</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poetsen One</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: none;
+background-color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string notr="true">1.0.0.1000</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lab_MCVersion_pre">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>28</y>
+       <width>155</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poetsen One</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: none;
+background-color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Multiclient Version:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lab_nosVersion_pre">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>5</y>
+       <width>136</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poetsen One</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: none;
+background-color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Nostale Version:</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="gb_lang">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>0</y>
+      <width>232</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poetsen One</family>
+      <pointsize>11</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: none;
+background-color: rgba(255, 255, 255, 0);
+
+QGroupBox {
+    border: 1px solid black;
+    margin-top: 0.5em;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 3px 0 3px;
+}</string>
+    </property>
+    <property name="title">
+     <string>Languages</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <widget class="QPushButton" name="btn_IT">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>20</y>
+       <width>52</width>
+       <height>52</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton::hover{border-image: url(:/main/img/it_light.png);}
+QPushButton::pressed{border-image: url(:/main/img/it_dark.png);}
+QPushButton{
+border-image: url(:/main/img/it.png); 
+ border-style: solid;
+ border-width:1px;
+ border-radius:50px;
+ max-width:50px;
+ max-height:50px;
+ min-width:50px;
+ min-height:50px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_EN">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>20</y>
+       <width>52</width>
+       <height>52</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton::hover{border-image: url(:/main/img/uk_light.png);}
+QPushButton::pressed{border-image: url(:/main/img/uk_dark.png);}
+QPushButton{
+border-image: url(:/main/img/uk.png);
+ border-style: solid;
+ border-width:1px;
+ border-radius:50px;
+ max-width:50px;
+ max-height:50px;
+ min-width:50px;
+ min-height:50px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_DE">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>52</width>
+       <height>52</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton::hover{border-image: url(:/main/img/ger_light.png);}
+QPushButton::pressed{border-image: url(:/main/img/ger_dark.png);}
+QPushButton{
+border-image: url(:/main/img/ger.png); 
+ border-style: solid;
+ border-width:1px;
+ border-radius:50px;
+ max-width:50px;
+ max-height:50px;
+ min-width:50px;
+ min-height:50px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <action name="actionGerman">
+   <property name="text">
+    <string>Deutsch</string>
+   </property>
+  </action>
+  <action name="actionEnglish">
+   <property name="text">
+    <string>English</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../mainform.qrc"/>
+ </resources>
+ <connections/>
+ <slots>
+  <slot>loadLanguage()</slot>
+  <slot>createMulti()</slot>
+  <slot>startClient()</slot>
+  <slot>removeMulti()</slot>
+  <slot>shortcutMulti()</slot>
+  <slot>shortcutCreator()</slot>
+  <slot>createAdvancedMulti()</slot>
+  <slot>folderSelection()</slot>
+  <slot>checkIPPort()</slot>
+ </slots>
+</ui>
